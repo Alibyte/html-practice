@@ -1,114 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey&Form</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <header>
-        <h1>Website Feedback Form</h1>
-        <nav></nav>
+      <h1>Website Feedback Form</h1>
+      <nav></nav>
     </header>
 
     <main>
+      <form action="/submit" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" />
+        </div>
 
-        <form action="/submit" method="post">
-            <div>
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" />
-            </div>
+        <div>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
+        </div>
 
+        <section>
+          <p>How would you rate your experience?</p>
 
-            <div>
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" />
-            </div>
+          <div>
+            <input type="radio" name="experience" id="excellent-radio" />
+            <label for="excellent-radio">Excellent</label>
+          </div>
 
-            <section>
+          <div>
+            <input id="good-radio" name="experience" type="radio" />
+            <label for="good-radio">Good</label>
+          </div>
 
-                <p>How would you rate your experience?</p>
+          <div>
+            <input id="poor-experience" name="experience" type="radio" />
+            <label for="poor-experience">Poor</label>
+          </div>
+        </section>
 
-                <div>
-                    <input type="radio" name="experience" id="excellent-radio" />
-                    <label for="excellent-radio">Excellent</label>
-                </div>
+        <section>
+          <p>Which features did you use?</p>
 
-                <div>
-                    <input id="good-radio" name="experience" type="radio" />
-                    <label for="good-radio">Good</label>
-                </div>
+          <div>
+            <input id="blog-feature" name="features" type="checkbox" />
+            <label for="blog-feature">Blog</label>
+          </div>
 
-                <div>
-                    <input id="poor-experience" name="experience" type="radio" />
-                    <label for="poor-experience">Poor</label>
-                </div>
+          <div>
+            <input id="forum-feature" name="features" type="checkbox" />
+            <label for="forum-feature">Forum</label>
+          </div>
 
-            </section>
+          <div>
+            <input id="documentation-feature" name="features" type="checkbox" />
+            <label for="documentation-feature">Documentation</label>
+          </div>
+        </section>
 
+        <section>
+          <label for="feedback-improve"
+            >What would you like us to improve?</label
+          >
+          <br />
+          <select id="feedback-improve" name="feedback">
+            <option value="">Please select an option</option>
 
-            <section>
-                <p>Which features did you use?</p>
+            <option value="design">Design</option>
 
-                <div>
-                    <input id="blog-feature" name="features" type="checkbox" />
-                    <label for="blog-feature">Blog</label>
-                </div>
+            <option value="interactivity">Interactive website</option>
+          </select>
+        </section>
 
-                <div>
-                    <input id="forum-feature" name="features" type="checkbox" />
-                    <label for="forum-feature">Forum</label>
-                </div>
+        <section>
+          <div>
+            <label for="addtional-comments">Additional Comments</label>
+          </div>
 
-                <div>
-                    <input id="documentation-feature" name="features" type="checkbox" />
-                    <label for="documentation-feature">Documentation</label>
-                </div>
+          <textarea
+            id="addtional-comments"
+            name="story"
+            rows="5"
+            cols="33"
+            placeholder="Hey there..."
+          ></textarea>
+        </section>
 
-            </section>
+        <div>
+          <button type="submit">Submit Feedback</button>
+        </div>
 
-
-            <section>
-                <label for="feedback-improve">What would you like us to improve?</label>
-                <br />
-                <select id="feedback-improve" name="feedback">
-                    <option value="">Please select an option</option>
-
-                    <option value="design">Design</option>
-
-                    <option value="interactivity">Interactive website</option>
-                </select>
-            </section>
-
-            <section>
-
-                <div>
-                    <label for="addtional-comments">Additional Comments</label>
-                </div>
-
-                <textarea id="addtional-comments" name="story" rows="5" cols="33" placeholder="Hey there..."></textarea>
-
-            </section>
-
-
-            <div>
-                <button type="submit">Submit Feedback</button>
-            </div>
-
-            <!-- Button either submits a form or opens a dialog -->
-        </form>
-
+        <!-- Button either submits a form or opens a dialog -->
+      </form>
     </main>
 
-    <footer>
-
-    </footer>
-
-
-</body>
-
+    <footer></footer>
+  </body>
 </html>
